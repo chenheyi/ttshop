@@ -2,13 +2,16 @@ package com.dhc.ttshop.service;
 
 import com.dhc.ttshop.pojo.po.TbItem;
 
+import java.util.List;
+
 /**
- * User: DHC
- * Date: 2017/10/17
- * Time: 10:16
+ * User: chenbo
+ * Date: 2017/10/20
+ * Time: 21:12
  * Version:V1.0
- * 商品实体类的业务逻辑层接口
  */
 public interface ItemService {
-    TbItem getById(Long itemId);
+    public TbItem getById(Long itemId);
+
+    List<TbItem> listItems();
 }

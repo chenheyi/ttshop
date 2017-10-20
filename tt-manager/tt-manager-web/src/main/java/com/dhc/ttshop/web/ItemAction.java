@@ -10,24 +10,28 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.List;
+
 /**
- * User: DHC
- * Date: 2017/10/17
- * Time: 10:08
+ * User: chenbo
+ * Date: 2017/10/20
+ * Time: 20:57
  * Version:V1.0
- * 商品的控制层代码
  */
 @Controller
 @Scope("prototype")
 public class ItemAction {
     @Autowired
-    private ItemService itemService;
+    private ItemService ser;
 
     @ResponseBody
-    @RequestMapping(value = "/item/{itemId}",method = RequestMethod.GET)
-    public TbItem getById(@PathVariable Long itemId){
-        System.out.println(itemId);
-        return itemService.getById(itemId);
+    @RequestMapping(value="/item/{itemId}",method= RequestMethod.GET)
+    public TbItem getById(@PathVariable Long itemId) {
+        return ser.getById(itemId);
     }
 
+    @RequestMapping("/items")
+    public List<TbItem> listItems() {
+        return ser.listItems();
+    }
 }

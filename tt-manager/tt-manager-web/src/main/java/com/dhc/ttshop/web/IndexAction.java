@@ -5,19 +5,17 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
- * User: DHC
- * Date: 2017/10/17
- * Time: 14:20
+ * User: chenbo
+ * Date: 2017/10/20
+ * Time: 20:36
  * Version:V1.0
- * 跳转到后台管理系统的首页
  */
 @Controller
 @Scope("prototype")
 public class IndexAction {
 
     @RequestMapping("/")
-    public String index(){
-        //WEB-INF/jsp/index.jsp
+    public String index() {
         return "index";
     }
 }
