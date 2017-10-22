@@ -44,6 +44,7 @@
         <div title="欢迎页面" style="padding:20px;">千锋欢迎你</div>
     </div>
 </div>
+
 <!-- jquery -->
 <script src="js/jquery-easyui-1.5/jquery.min.js"></script>
 <!-- jquery easyui -->
@@ -53,13 +54,8 @@
 <script src="js/common.js"></script>
 <!-- 自定义js -->
 <script>
-    ttshop.registerMenuEvent();
+   ttshop.registerMenuEvent();
 </script>
-<script>
-    $(function(){
-        var a = 1;
-        var b = 2;
-    });
-</script>
+
 </body>
 </html>
